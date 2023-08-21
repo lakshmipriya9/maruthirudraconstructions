@@ -1,0 +1,36 @@
+@media (min-width: 991px) {
+  .amenities_sec .col-lg-2 {
+    width: 20%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-nav {
+    text-align: center !important;
+  }
+  .navbar .navbar-nav .nav-link {
+    margin-right: 0px;
+    padding: 1rem 0rem;
+  }
+  .banner_sec .banner_card {
+    padding: 50px 30px;
+  }
+  .sec__2 p {
+    padding: 20px 20px;
+  }
+  .location_sec {
+    background-color: var(--bg-a2a-orange);
+    height: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slick-arrow.slick-prev {
+    left: 0px;
+  }
+  .slick-arrow.slick-next {
+    right: 15px;
+  }
+}
