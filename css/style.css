@@ -125,13 +125,22 @@ header{
       background: #fff;
     box-shadow: 0px -4px 4px 5px #ddd;
 }
+@media(min-width: 575px){
+  .stickyform{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  transform: .3s ease all-in-out;
+}
+}
 /*Header CSS ENDS*/
 
 /*Banner CSS BEGINS*/
 .banner_sec{
   background: url('../img/main-banner.jpg') center center no-repeat; 
   background-size: cover; 
-  min-height: 90vh;
+  min-height: 87vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -404,4 +413,16 @@ button {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+@media(max-width: 575px){
+  .sticky-btn{
+    right: -12%;
+  }
+}
+
+@media(max-width: 380px){
+  .sticky-btn{
+    right: -16%;
+  }
 }
