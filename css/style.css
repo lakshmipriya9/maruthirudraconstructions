@@ -111,9 +111,19 @@ section{
   border-radius: 10px;
 }
 .btn.btn-brand:hover{
-  background: #122b3f;
-  color: #d9b77a;
+  background: #d9b77a;
+  color: #ef4b23
 }
+header .btn.btn-brand{
+background: #ef4b23;
+color: #fff;
+border: 1px solid #ef4b23;
+}
+header .btn.btn-brand:hover{
+background: #fff;
+color: #ef4b23;
+}
+
 /*Header CSS BEGINS*/
 header{
     position: fixed;
@@ -144,6 +154,14 @@ header{
   align-items: center;
   position: relative;
 }
+.banner_sec ul{
+  list-style-type: none;
+  padding-left: 0;	
+}
+.banner_sec ul li{
+  color: #fff;
+font-size: 18px;
+  }
 /*Banner CSS ENDS*/
 
 /*Form CSS BEGINS*/
@@ -383,8 +401,8 @@ button {
 }
 
 .sticky-btn {
-    background: #d9b77a;
-    color: #000 !important;
+    background: #ef4b23;
+    color: #fff !important;
     text-decoration: none;
     text-align: center;
     padding: 10px 20px;
