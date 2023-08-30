@@ -101,23 +101,29 @@ $input_params=array(
 	'ua_country'=>'',
 	'form_data'=> $post_dump,
 );	
-$fields = $input_params;
-$postvars = '';
-	foreach($fields as $key=>$value) {
-		$postvars .= $key . "=" . $value . "&";
-	}
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,"https://leadstore.in/capture_leads/capture/70");
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS,$postvars);
-// in real life you should use something like:
-// curl_setopt($ch, CURLOPT_POSTFIELDS, 
-//http_build_query(array('postvar1' => 'value1')));
-// receive server response ...
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$server_output = curl_exec ($ch);
-curl_close ($ch);  
+// $fields = $input_params;
+// $postvars = '';
+//     foreach($fields as $key=>$value) {
+//         $postvars .= $key . "=" . $value . "&";
+//     }
+// $ch = curl_init();
+// curl_setopt($ch, CURLOPT_URL,"https://leadstore.in/capture_leads/capture/70");
+// curl_setopt($ch, CURLOPT_POST, 1);
+// curl_setopt($ch, CURLOPT_POSTFIELDS,$postvars);
+// // in real life you should use something like:
+// // curl_setopt($ch, CURLOPT_POSTFIELDS, 
+// //http_build_query(array('postvar1' => 'value1')));
+// // receive server response ...
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// $server_output = curl_exec ($ch);
+// curl_close ($ch);  
 /****************End CURL CALL**********************/
+
+/******** Clove CRM API Integration *********/ 
+// error_log("Clove API Call Start ");
+// include_once('../../api.php');  
+// error_log("Clove API Call End ");
+/******** End API *********/ 
 
 ob_start();
 ?>
@@ -141,7 +147,7 @@ ob_start();
 
         <div style="font-size: 13px;color: #333;display:block;margin: 15px 0 15px;max-width:360px;">
             <p style="font-size: 12px; color: #888;margin: 0 0 6px;"><?php echo date('M d, Y', strtotime($date)); ?></p>
-            <p style="margin: 0 0 6px;"><strong>Name: </strong><?php echo ucwords($first_name); <?php echo ucwords($last_name); ?></p>
+            <p style="margin: 0 0 6px;"><strong>Name: </strong><?php echo ucwords($first_name); ?> <?php echo ucwords($last_name); ?></p>
             <p style="margin: 0 0 6px;"><strong>Email: </strong><?php echo $email; ?></p>
             <p style="margin: 0 0 6px;"><strong>Phone: </strong><?php echo $phone; ?></p>
             <p style="margin: 0 0 6px;"><strong>Message: </strong><?php echo $message; ?></p>
@@ -368,7 +374,7 @@ ob_start();
                                 <td class="inner contents"
                                     style="text-align:left;background-image: url('https://imgur.com/N2HK4eZ.jpg')"
                                     bgcolor="#ede7d9">
-                                    <p>Hello <strong><?php echo ucwords($full_name); <?php echo ucwords($last_name); ?></strong>,</p>
+                                    <p>Hello <strong><?php echo ucwords($full_name); ?> <?php echo ucwords($last_name); ?></strong>,</p>
                                     <p></p>
                                     <p>Thank you for reaching out to us.</p>
                                     <p>We recevied your details. we will get back to you soon</p>
